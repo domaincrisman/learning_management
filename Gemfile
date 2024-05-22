@@ -8,8 +8,8 @@ gem "rails", "~> 7.1.3", ">= 7.1.3.2"
 # The original asset pipeline for Rails [https://github.com/rails/sprockets-rails]
 gem "sprockets-rails"
 
-# Use sqlite3 as the database for Active Record
-gem "sqlite3", "~> 1.4"
+# Use pg as the database for Active Record
+gem "pg", "~> 1.1"
 
 # Use pg as the database for Active Record
 # gem "pg", "~> 1.1"
@@ -81,3 +81,5 @@ gem 'stripe', '~> 11.2'
 gem 'acts_as_list', '~> 1.1'
 
 gem 'groupdate', '~> 6.4'
+
+gem 'aws-sdk-s3'
