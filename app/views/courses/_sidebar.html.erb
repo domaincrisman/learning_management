@@ -37,12 +37,16 @@
     <div class="mt-6 flex justify-center items-center w-full ">
       <div class="bg-white rounded-lg shadow-lg overflow-hidden w-full">
         <div class="bg-amaranth-500 p-4">
-          <h2 class="text-white-50 text-2xl font-bold">Get more content</h2>
+          <% if @user_unlocked_course %>
+            <h2 class="text-white-50 text-2xl font-bold">You have premium access</h2>
+          <% else %>
+            <h2 class="text-white-50 text-2xl font-bold">Get more content</h2>
+          <% end %>
         </div>
         <div class="p-4">
           <% if user_signed_in? %>
             <p class="text-gray-700 text-base mb-4">
-              Unlock more content by purchasing the full coruse.
+              Unlock more content by purchasing the full course.
             </p>
             <%= form_tag checkouts_path(@course), method: :post, class: 'mt-4' do %>
               <%= hidden_field_tag :course_id, @course.id %>
